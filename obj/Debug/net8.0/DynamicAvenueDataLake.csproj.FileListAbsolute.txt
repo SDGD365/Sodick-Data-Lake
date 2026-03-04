@@ -1,0 +1,198 @@
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\host.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\local.settings.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\DynamicAvenueDataLake.exe
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\functions.metadata
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\worker.config.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\extensions.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.WebJobs.Extensions.FunctionMetadataLoader.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\function.deps.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.Functions.Worker.Extensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.Functions.Worker.Extensions.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.WebJobs.Host.Storage.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.WindowsAzure.Storage.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\DynamicAvenueDataLake.deps.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\DynamicAvenueDataLake.runtimeconfig.json
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\DynamicAvenueDataLake.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Azure.Monitor.OpenTelemetry.Exporter.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.ApplicationInsights.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.ApplicationInsights.WorkerService.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.ApplicationInsights.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Core.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Grpc.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Hosting.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.Api.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.Instrumentation.SqlClient.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.PersistentStorage.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\OpenTelemetry.PersistentStorage.FileSystem.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.csproj.AssemblyReference.cache
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.AssemblyInfoInputs.cache
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.AssemblyInfo.cs
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.csproj.CoreCompileInputs.cache
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicA.38066535.Up2Date
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\refint\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.genruntimeconfig.cache
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\ref\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic Avenue Data Lake\obj\Debug\net8.0\DynamicAvenueDataLake.sourcelink.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.csproj.AssemblyReference.cache
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.AssemblyInfoInputs.cache
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.AssemblyInfo.cs
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.csproj.CoreCompileInputs.cache
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.sourcelink.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\host.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\local.settings.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\DynamicAvenueDataLake.exe
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\functions.metadata
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\worker.config.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\extensions.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.WebJobs.Extensions.FunctionMetadataLoader.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\function.deps.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.Functions.Worker.Extensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.Functions.Worker.Extensions.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.Azure.WebJobs.Host.Storage.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\.azurefunctions\Microsoft.WindowsAzure.Storage.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\DynamicAvenueDataLake.deps.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\DynamicAvenueDataLake.runtimeconfig.json
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\DynamicAvenueDataLake.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Core.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Grpc.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Hosting.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicA.38066535.Up2Date
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\refint\DynamicAvenueDataLake.dll
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.pdb
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\DynamicAvenueDataLake.genruntimeconfig.cache
+C:\Users\StephanWeichers\source\repos\Dynamic-Avenue-Data-Lake\obj\Debug\net8.0\ref\DynamicAvenueDataLake.dll
