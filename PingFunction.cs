@@ -1,16 +1,16 @@
-﻿using Microsoft.Azure.Functions.Worker;
+﻿using System.Net;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using System.Net;
 
-public sealed class PingFunction
+public class PingFunction
 {
     [Function("Ping")]
-    public static HttpResponseData Run(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "ping")] HttpRequestData req)
+    public async Task<HttpResponseData> Run(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "ping")] HttpRequestData req)
     {
         var resp = req.CreateResponse(HttpStatusCode.OK);
-        resp.Headers.Add("Content-Type", "application/json");
-        resp.WriteString("{\"ok\":true}");
+        resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
+        await resp.WriteStringAsync("{\"ok\":true}");
         return resp;
-    } 
+    }
 }
