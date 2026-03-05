@@ -59,11 +59,18 @@ public sealed class AskFunction
                 Snippet = h.Snippet
             }).ToList();
 
-            var respObj = new AskResponse { Answer = answer, Citations = citations };
+            var responseObj = new
+            {
+                Answer = answer,
+                Citations = citations, // bleibt für Connector-Test/Swagger gut
+                CitationsJson = JsonSerializer.Serialize(citations),
+                ViewerUrl = citations.FirstOrDefault()?.ViewerUrl // optional: erster Treffer
+            };
+            
             var resp = req.CreateResponse(HttpStatusCode.OK);
             resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
             resp.Headers.Add("x-poc-source", "ask-v1");
-            await resp.WriteStringAsync(JsonSerializer.Serialize(respObj));
+            await resp.WriteStringAsync(JsonSerializer.Serialize(responseObj));
             return resp;
         }
         catch (Exception ex)
