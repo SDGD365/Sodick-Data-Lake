@@ -54,6 +54,7 @@ public sealed class AskFunction
             var respObj = new AskResponse { Answer = answer, Citations = citations };
             var resp = req.CreateResponse(HttpStatusCode.OK);
             resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
+            resp.Headers.Add("x-poc-source", "ask-v1");
             await resp.WriteStringAsync(JsonSerializer.Serialize(respObj));
             return resp;
         }
