@@ -39,7 +39,7 @@ public sealed class AskFunction
 
             // Call our own search endpoint (internal URL is simplest for PoC)
             // In production you'd call Search as a method or move logic to a shared service.
-            var baseUrl = $"{req.Url.Scheme}://{req.Url.Host}{(req.Url.IsDefaultPort ? "" : ":" + req.Url.Port)}";
+            var baseUrl = Environment.GetEnvironmentVariable("Name") ?? $"{req.Url.Scheme}://{req.Url.Host}{(req.Url.IsDefaultPort ? "" : ":" + req.Url.Port)}";
             var searchUrl = $"{baseUrl}/api/search?docId={ask.DocId}&version={ask.Version}&lang={lang}&q={Uri.EscapeDataString(ask.Question)}";
 
             using var http = new HttpClient();
@@ -66,11 +66,10 @@ public sealed class AskFunction
                 CitationsJson = JsonSerializer.Serialize(citations),
                 ViewerUrl = citations.FirstOrDefault()?.ViewerUrl // optional: erster Treffer
             };
-            
+
             var resp = req.CreateResponse(HttpStatusCode.OK);
-            resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
             resp.Headers.Add("x-poc-source", "ask-v1");
-            await resp.WriteStringAsync(JsonSerializer.Serialize(responseObj));
+            await resp.WriteAsJsonAsync(responseObj);
             return resp;
         }
         catch (Exception ex)
