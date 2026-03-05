@@ -18,12 +18,12 @@ public sealed class AskFunction
             var ask = JsonSerializer.Deserialize<AskRequest>(
                 body,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
-            ) ?? new AskRequest();
+            );
 
-            if (string.IsNullOrWhiteSpace(ask.Question))
+            if (ask == null || string.IsNullOrWhiteSpace(ask.Question))
             {
                 var bad = req.CreateResponse(HttpStatusCode.BadRequest);
-                await bad.WriteStringAsync("Missing question");
+                await bad.WriteStringAsync($"Missing question. Body was: {body}");
                 return bad;
             }
 
