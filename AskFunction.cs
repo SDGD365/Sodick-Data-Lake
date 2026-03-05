@@ -2,11 +2,19 @@
 using Azure.Storage.Blobs;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text.Json;
 
 public sealed class AskFunction
 {
+    private readonly ILogger<AskFunction> _logger;
+
+    public AskFunction(ILogger<AskFunction> logger)
+    {
+        _logger = logger;
+    }
+
     [Function("Ask")]
     public async Task<HttpResponseData> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "qa/ask")] HttpRequestData req)
@@ -14,7 +22,7 @@ public sealed class AskFunction
         try
         {
             var body = await new StreamReader(req.Body).ReadToEndAsync();
-
+            _logger.LogInformation("Ask raw body: {Body}", body);
             var ask = JsonSerializer.Deserialize<AskRequest>(
                 body,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
@@ -23,7 +31,7 @@ public sealed class AskFunction
             if (ask == null || string.IsNullOrWhiteSpace(ask.Question))
             {
                 var bad = req.CreateResponse(HttpStatusCode.BadRequest);
-                await bad.WriteStringAsync($"Missing question. Body was: {body}");
+                await bad.WriteStringAsync($"BadRequest. Raw body was: {body}");
                 return bad;
             }
 
