@@ -68,8 +68,14 @@ public sealed class AskFunction
             };
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
-            resp.Headers.Add("x-poc-source", "ask-v1");
+
+            resp.Headers.Add("Content-Security-Policy", "frame-ancestors https://*.dynamics.com https://*.crm*.dynamics.com https://make.powerapps.com;");
+            resp.Headers.Add("Content-Disposition", "inline");
+            // Optional, hilft manchmal bei eingebetteten Ressourcen:
+            resp.Headers.Add("Cross-Origin-Resource-Policy", "cross-origin");
+
             await resp.WriteAsJsonAsync(responseObj);
+
             return resp;
         }
         catch (Exception ex)
