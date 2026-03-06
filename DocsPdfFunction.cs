@@ -40,6 +40,7 @@ public sealed class DocsPdfFunction
             var download = await blob.DownloadStreamingAsync();
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
+            resp.Headers.Add("Access-Control-Allow-Origin", "*");
             resp.Headers.Add("Content-Type", "application/pdf");
             resp.Headers.Add("Cache-Control", "private, max-age=60");
 

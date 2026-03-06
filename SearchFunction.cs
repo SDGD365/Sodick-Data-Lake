@@ -1,11 +1,12 @@
-﻿using System.Net;
-using System.Text;
-using System.Text.Json;
+﻿using Azure;
 using Azure.Identity;
 using Azure.Storage.Blobs;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Configuration;
+using System.Net;
+using System.Text;
+using System.Text.Json;
 
 public sealed class SearchFunction
 {
@@ -78,6 +79,7 @@ public sealed class SearchFunction
                 .ToList();
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
+            resp.Headers.Add("Access-Control-Allow-Origin", "*");
             resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
             resp.Headers.Add(
               "Content-Security-Policy",

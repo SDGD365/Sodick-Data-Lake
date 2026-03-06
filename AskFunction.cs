@@ -69,6 +69,7 @@ public sealed class AskFunction
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
 
+            resp.Headers.Add("Access-Control-Allow-Origin", "*");
             resp.Headers.Add(
               "Content-Security-Policy",
               "frame-ancestors " +
