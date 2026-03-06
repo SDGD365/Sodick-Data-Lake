@@ -79,6 +79,15 @@ public sealed class SearchFunction
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
             resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
+            resp.Headers.Add(
+              "Content-Security-Policy",
+              "frame-ancestors " +
+              "https://make.powerapps.com " +
+              "https://*.powerapps.com " +
+              "https://*.apps.powerapps.com " +
+              "https://*.dynamics.com " +
+              "https://*.crm*.dynamics.com;"
+            );
             await resp.WriteStringAsync(JsonSerializer.Serialize(top));
             return resp;
         }

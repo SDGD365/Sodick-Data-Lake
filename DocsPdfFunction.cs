@@ -44,9 +44,15 @@ public sealed class DocsPdfFunction
             resp.Headers.Add("Cache-Control", "private, max-age=60");
 
             // Wichtig für iframe embedding in D365:
-            resp.Headers.Add("Content-Security-Policy",
-                "frame-ancestors https://*.dynamics.com https://*.crm*.dynamics.com https://make.powerapps.com;");
-
+            resp.Headers.Add(
+              "Content-Security-Policy",
+              "frame-ancestors " +
+              "https://make.powerapps.com " +
+              "https://*.powerapps.com " +
+              "https://*.apps.powerapps.com " +
+              "https://*.dynamics.com " +
+              "https://*.crm*.dynamics.com;"
+            );
             // Optional, hilft manchmal bei eingebetteten Ressourcen:
             resp.Headers.Add("Cross-Origin-Resource-Policy", "cross-origin");
 
