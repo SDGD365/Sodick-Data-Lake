@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "obzuzteYn0s=",
+  "dgSpecHash": "EvC9lrv8EGE=",
   "success": true,
-  "projectFilePath": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\obj\\Debug\\net8.0\\WorkerExtensions\\WorkerExtensions.csproj",
+  "projectFilePath": "C:\\Users\\StephanWeichers\\source\\repos\\Sodick-Data-Lake\\obj\\Debug\\net8.0\\WorkerExtensions\\WorkerExtensions.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\StephanWeichers\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.8\\microsoft.aspnet.webapi.client.5.2.8.nupkg.sha512",
     "C:\\Users\\StephanWeichers\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

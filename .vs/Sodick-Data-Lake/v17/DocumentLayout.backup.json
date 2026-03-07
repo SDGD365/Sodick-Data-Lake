@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\",
+  "WorkspaceRootPath": "C:\\Users\\StephanWeichers\\source\\repos\\Sodick-Data-Lake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\temp.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:temp.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\StephanWeichers\\source\\repos\\Sodick-Data-Lake\\DocsPdfFunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DocsPdfFunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -35,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "temp.txt",
-              "DocumentMoniker": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\temp.txt",
-              "RelativeDocumentMoniker": "temp.txt",
-              "ToolTip": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\temp.txt",
-              "RelativeToolTip": "temp.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-04T11:54:23.174Z",
+              "Title": "DocsPdfFunction.cs",
+              "DocumentMoniker": "C:\\Users\\StephanWeichers\\source\\repos\\Sodick-Data-Lake\\DocsPdfFunction.cs",
+              "RelativeDocumentMoniker": "DocsPdfFunction.cs",
+              "ToolTip": "C:\\Users\\StephanWeichers\\source\\repos\\Sodick-Data-Lake\\DocsPdfFunction.cs",
+              "RelativeToolTip": "DocsPdfFunction.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvzMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T09:50:48.182Z",
               "EditorCaption": ""
             }
           ]
