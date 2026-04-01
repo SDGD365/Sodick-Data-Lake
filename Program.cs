@@ -1,6 +1,7 @@
 using Azure.Storage.Blobs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SodickDataLake.Functions.Services;
 using SodickDataLake.Services;
 
 var host = new HostBuilder()
@@ -21,7 +22,7 @@ var host = new HostBuilder()
         DefaultOutputFolder = outputFolder
     });
 
-    services.AddSingleton<PdfJsonGeneratorService>();
+    services.AddSingleton<SearchJsonGeneratorService>();
 })
     .Build();
 

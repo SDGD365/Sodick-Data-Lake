@@ -135,5 +135,33 @@
         "direction": "Out"
       }
     ]
+  },
+  {
+    "name": "GenerateSearchJson",
+    "scriptFile": "SodickDataLake.dll",
+    "entryPoint": "SodickDataLake.GenerateSearchJsonFunction.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "direction": "In",
+        "type": "httpTrigger",
+        "authLevel": "Function",
+        "methods": [
+          "get",
+          "post"
+        ],
+        "route": "GenerateSearchJson",
+        "properties": {}
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
   }
 ]
