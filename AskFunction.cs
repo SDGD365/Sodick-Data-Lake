@@ -45,7 +45,8 @@ public sealed class AskFunction
 
             using var http = new HttpClient();
             var searchJson = await http.GetStringAsync(searchUrl);
-            var hits = JsonSerializer.Deserialize<List<SearchHit>>(searchJson) ?? new();
+            var searchResponse = JsonSerializer.Deserialize<SearchApiResponse>(searchJson) ?? new();
+            var hits = searchResponse.Results ?? new List<SearchHit>();
 
             // PoC answer (ohne LLM): kurze Zusammenfassung aus Top-Hits
             // Später ersetzt du das durch echtes RAG (Azure OpenAI).
@@ -64,7 +65,6 @@ public sealed class AskFunction
                 Answer = answer,
                 Citations = citations, // bleibt für Connector-Test/Swagger gut
                 CitationsJson = JsonSerializer.Serialize(citations),
-                ViewerUrl = citations.FirstOrDefault()?.ViewerUrl // optional: erster Treffer
             };
 
             var resp = req.CreateResponse(HttpStatusCode.OK);
