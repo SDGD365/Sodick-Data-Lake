@@ -128,13 +128,23 @@ public sealed class ManualSearchService
         return s;
     }
 
+    private static readonly HashSet<string> AllowedShortTerms = ["lan","nc","md","hi"];
+
     private static List<string> SplitTerms(string normalizedQuery)
     {
         return normalizedQuery
             .Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-            .Where(t => t.Length >= 2)
+            .Where(t => t.Length >= 4 || AllowedShortTerms.Contains(t))
             .Distinct()
             .ToList();
+    }
+
+    private static HashSet<string> Tokenize(string normalizedText)
+    {
+        return normalizedText
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .Where(t => t.Length >= 2)
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
     }
 
     private static int Score(string searchText, List<string> queryTerms)
@@ -142,24 +152,30 @@ public sealed class ManualSearchService
         if (string.IsNullOrWhiteSpace(searchText) || queryTerms.Count == 0)
             return 0;
 
-        var score = 0;
+        var tokens = Tokenize(searchText);
+        var matchedTerms = 0;
 
         foreach (var term in queryTerms)
         {
-            if (searchText.Contains(term, StringComparison.OrdinalIgnoreCase))
+            if (tokens.Contains(term))
             {
-                score += 1;
+                matchedTerms++;
             }
         }
 
-        if (searchText.Contains(string.Join(" ", queryTerms), StringComparison.OrdinalIgnoreCase))
+        if (matchedTerms == 0)
+            return 0;
+
+        var score = matchedTerms * 2;
+
+        var fullPhrase = string.Join(" ", queryTerms);
+        if (searchText.Contains(fullPhrase, StringComparison.OrdinalIgnoreCase))
         {
-            score += 2;
+            score += 3;
         }
 
         return score;
     }
-
     private static string BuildSnippet(string text, List<string> queryTerms)
     {
         if (string.IsNullOrWhiteSpace(text))

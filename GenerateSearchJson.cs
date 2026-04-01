@@ -6,11 +6,11 @@ using SodickDataLake.Functions.Services;
 
 namespace SodickDataLake;
 
-public sealed class GenerateSearchJsonFunction
+public sealed class GenerateSearchJson
 {
     private readonly SearchJsonGeneratorService _service;
 
-    public GenerateSearchJsonFunction(SearchJsonGeneratorService service)
+    public GenerateSearchJson(SearchJsonGeneratorService service)
     {
         _service = service;
     }

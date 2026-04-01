@@ -112,7 +112,7 @@
   {
     "name": "GenerateSearchJson",
     "scriptFile": "SodickDataLake.dll",
-    "entryPoint": "SodickDataLake.GenerateSearchJsonFunction.Run",
+    "entryPoint": "SodickDataLake.GenerateSearchJson.Run",
     "language": "dotnet-isolated",
     "properties": {
       "IsCodeless": false

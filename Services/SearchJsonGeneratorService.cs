@@ -87,7 +87,11 @@ public sealed class SearchJsonGeneratorService
                 continue;
 
             var normalizedSearchText = NormalizeForSearch(text);
-            if (string.IsNullOrWhiteSpace(normalizedSearchText))
+            var tokenCount = normalizedSearchText
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Length;
+
+            if (tokenCount < 5)
                 continue;
 
             items.Add(new SearchPageItem
