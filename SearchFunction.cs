@@ -32,7 +32,7 @@ public sealed class SearchFunction
                 return bad;
             }
 
-            var chunksPath = $"processed/{docId}/{version}/chunks.jsonl";
+            var chunksPath = $"processed/{docId}/{version}/manual.json";
 
             var storageUrl = _cfg["StorageAccountBlobUrl"]!;
             var containerName = _cfg["BookContainer"]!;
@@ -42,7 +42,7 @@ public sealed class SearchFunction
             if (!await blob.ExistsAsync())
             {
                 var nf = req.CreateResponse(HttpStatusCode.NotFound);
-                await nf.WriteStringAsync($"chunks.jsonl not found: {chunksPath}");
+                await nf.WriteStringAsync($"manual.json not found: {chunksPath}");
                 return nf;
             }
 
