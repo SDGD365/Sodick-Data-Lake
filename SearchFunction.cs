@@ -1,131 +1,78 @@
-﻿using Azure;
-using Azure.Identity;
-using Azure.Storage.Blobs;
-using Microsoft.Azure.Functions.Worker;
+﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Extensions.Configuration;
+using SodickDataLake.Functions.Services;
+using SodickDataLake.Services;
 using System.Net;
-using System.Text;
 using System.Text.Json;
+
+namespace SodickDataLake;
 
 public sealed class SearchFunction
 {
-    private readonly IConfiguration _cfg;
-    public SearchFunction(IConfiguration cfg) => _cfg = cfg;
+    private readonly ManualSearchService _searchService;
+
+    public SearchFunction(ManualSearchService searchService)
+    {
+        _searchService = searchService;
+    }
 
     [Function("Search")]
     public async Task<HttpResponseData> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "search")] HttpRequestData req)
+        [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "Search")] HttpRequestData req,
+        CancellationToken cancellationToken)
     {
-        try
+        var query = System.Web.HttpUtility.ParseQueryString(req.Url.Query);
+
+        var q = query["q"] ?? query["query"];
+        var searchJsonPath = query["searchJsonPath"] ?? "processed/demo/v1/manual.search.json";
+        var pdfPath = query["pdfPath"] ?? "raw/demo/v1/manual.pdf";
+        var top = int.TryParse(query["top"], out var parsedTop) ? parsedTop : 10;
+
+        if (string.IsNullOrWhiteSpace(q) && req.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
         {
-            var q = System.Web.HttpUtility.ParseQueryString(req.Url.Query);
-            var docId = q["docId"] ?? "demo";
-            var version = q["version"] ?? "v1";
-            var query = q["q"] ?? "";
-            var lang = (q["lang"] ?? "de").ToLowerInvariant();
+            using var reader = new StreamReader(req.Body);
+            var body = await reader.ReadToEndAsync(cancellationToken);
 
-            if (string.IsNullOrWhiteSpace(query))
+            if (!string.IsNullOrWhiteSpace(body))
             {
-                var bad = req.CreateResponse(HttpStatusCode.BadRequest);
-                await bad.WriteStringAsync("Missing q");
-                return bad;
-            }
-
-            var chunksPath = $"processed/{docId}/{version}/manual.json";
-
-            var storageUrl = _cfg["StorageAccountBlobUrl"]!;
-            var containerName = _cfg["BookContainer"]!;
-            var blobService = new BlobServiceClient(new Uri(storageUrl), new DefaultAzureCredential());
-            var blob = blobService.GetBlobContainerClient(containerName).GetBlobClient(chunksPath);
-
-            if (!await blob.ExistsAsync())
-            {
-                var nf = req.CreateResponse(HttpStatusCode.NotFound);
-                await nf.WriteStringAsync($"manual.json not found: {chunksPath}");
-                return nf;
-            }
-
-            var download = await blob.DownloadContentAsync();
-            var text = download.Value.Content.ToString();
-
-            var hits = new List<SearchHit>();
-            foreach (var line in text.Split('\n', StringSplitOptions.RemoveEmptyEntries))
-            {
-                Chunk? chunk;
-                try { chunk = JsonSerializer.Deserialize<Chunk>(line); }
-                catch { continue; }
-
-                if (chunk == null) continue;
-                if (!string.Equals(chunk.Lang, lang, StringComparison.OrdinalIgnoreCase)) continue;
-
-                var score = ScoreContains(chunk.Text, query);
-                if (score <= 0) continue;
-
-                hits.Add(new SearchHit
+                var payload = JsonSerializer.Deserialize<SearchRequestPayload>(body, new JsonSerializerOptions
                 {
-                    ChunkId = chunk.ChunkId,
-                    Page = chunk.Page,
-                    Score = score,
-                    Snippet = MakeSnippet(chunk.Text, query, 240),
-                    PdfPath = chunk.PdfPath
+                    PropertyNameCaseInsensitive = true
                 });
+
+                q ??= payload?.Query;
+                searchJsonPath = payload?.SearchJsonPath ?? searchJsonPath;
+                pdfPath = payload?.PdfPath ?? pdfPath;
+                top = payload?.Top ?? top;
             }
-
-            var top = hits
-                .OrderByDescending(h => h.Score)
-                .ThenBy(h => h.Page)
-                .Take(5)
-                .ToList();
-
-            var resp = req.CreateResponse(HttpStatusCode.OK);
-            resp.Headers.Add("Access-Control-Allow-Origin", "*");
-            resp.Headers.Add("Content-Type", "application/json; charset=utf-8");
-            resp.Headers.Add(
-              "Content-Security-Policy",
-              "frame-ancestors " +
-              "https://make.powerapps.com " +
-              "https://*.powerapps.com " +
-              "https://*.apps.powerapps.com " +
-              "https://*.dynamics.com " +
-              "https://*.crm*.dynamics.com;"
-            );
-            await resp.WriteStringAsync(JsonSerializer.Serialize(top));
-            return resp;
         }
-        catch (Exception ex)
+
+        if (string.IsNullOrWhiteSpace(q))
         {
-            var resp = req.CreateResponse(HttpStatusCode.InternalServerError);
-            await resp.WriteStringAsync(ex.ToString());
-            return resp;
+            var badRequest = req.CreateResponse(HttpStatusCode.BadRequest);
+            await badRequest.WriteStringAsync("Please provide q or query.", cancellationToken);
+            return badRequest;
         }
+
+        var result = await _searchService.SearchAsync(q, searchJsonPath, pdfPath, top, cancellationToken);
+
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        response.Headers.Add("Content-Type", "application/json; charset=utf-8");
+
+        await response.WriteStringAsync(JsonSerializer.Serialize(result, new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = null,
+            WriteIndented = true
+        }), cancellationToken);
+
+        return response;
     }
 
-    private static double ScoreContains(string text, string query)
+    private sealed class SearchRequestPayload
     {
-        var t = text.ToLowerInvariant();
-        var q = query.ToLowerInvariant();
-
-        // super simpel: count occurrences
-        int count = 0, idx = 0;
-        while ((idx = t.IndexOf(q, idx, StringComparison.Ordinal)) >= 0)
-        {
-            count++;
-            idx += q.Length;
-        }
-        return count;
-    }
-
-    private static string MakeSnippet(string text, string query, int maxLen)
-    {
-        var idx = text.IndexOf(query, StringComparison.OrdinalIgnoreCase);
-        if (idx < 0) return text.Length <= maxLen ? text : text[..maxLen] + "…";
-
-        var start = Math.Max(0, idx - 80);
-        var end = Math.Min(text.Length, start + maxLen);
-        var snippet = text[start..end];
-        if (start > 0) snippet = "…" + snippet;
-        if (end < text.Length) snippet += "…";
-        return snippet;
+        public string? Query { get; set; }
+        public string? SearchJsonPath { get; set; }
+        public string? PdfPath { get; set; }
+        public int? Top { get; set; }
     }
 }

@@ -22,7 +22,9 @@ var host = new HostBuilder()
         DefaultOutputFolder = outputFolder
     });
 
+    services.AddSingleton<PdfJsonGeneratorService>();
     services.AddSingleton<SearchJsonGeneratorService>();
+    services.AddSingleton<ManualSearchService>();
 })
     .Build();
 

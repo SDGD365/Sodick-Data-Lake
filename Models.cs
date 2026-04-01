@@ -8,16 +8,6 @@ public sealed class Chunk
     [JsonPropertyName("text")] public string Text { get; set; } = "";
     [JsonPropertyName("pdfPath")] public string PdfPath { get; set; } = "";
 }
-
-public sealed class SearchHit
-{
-    public string ChunkId { get; set; } = "";
-    public int Page { get; set; }
-    public double Score { get; set; }
-    public string Snippet { get; set; } = "";
-    public string PdfPath { get; set; } = "";
-}
-
 public sealed class AskRequest
 {
     public string DocId { get; set; } = "demo";
@@ -25,7 +15,6 @@ public sealed class AskRequest
     public string Question { get; set; } = "";
     public string Lang { get; set; } = "auto"; // auto | de | en
 }
-
 public sealed class Citation
 {
     public int Page { get; set; }
@@ -33,7 +22,6 @@ public sealed class Citation
     public string ViewerUrl { get; set; } = "";
     public string Snippet { get; set; } = "";
 }
-
 public sealed class AskResponse
 {
     public string Answer { get; set; } = "";

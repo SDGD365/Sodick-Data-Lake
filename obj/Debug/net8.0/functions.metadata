@@ -82,33 +82,6 @@
     ]
   },
   {
-    "name": "Search",
-    "scriptFile": "SodickDataLake.dll",
-    "entryPoint": "SearchFunction.Run",
-    "language": "dotnet-isolated",
-    "properties": {
-      "IsCodeless": false
-    },
-    "bindings": [
-      {
-        "name": "req",
-        "direction": "In",
-        "type": "httpTrigger",
-        "authLevel": "Anonymous",
-        "methods": [
-          "get"
-        ],
-        "route": "search",
-        "properties": {}
-      },
-      {
-        "name": "$return",
-        "type": "http",
-        "direction": "Out"
-      }
-    ]
-  },
-  {
     "name": "GeneratePdfJson",
     "scriptFile": "SodickDataLake.dll",
     "entryPoint": "SodickDataLake.GeneratePdfJson.Run",
@@ -155,6 +128,34 @@
           "post"
         ],
         "route": "GenerateSearchJson",
+        "properties": {}
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  },
+  {
+    "name": "Search",
+    "scriptFile": "SodickDataLake.dll",
+    "entryPoint": "SodickDataLake.SearchFunction.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "direction": "In",
+        "type": "httpTrigger",
+        "authLevel": "Function",
+        "methods": [
+          "get",
+          "post"
+        ],
+        "route": "Search",
         "properties": {}
       },
       {

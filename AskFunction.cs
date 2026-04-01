@@ -3,6 +3,7 @@ using Azure.Storage.Blobs;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using SodickDataLake.Models;
 using System.Net;
 using System.Text.Json;
 
@@ -52,10 +53,9 @@ public sealed class AskFunction
 
             var citations = hits.Select(h => new Citation
             {
-                Page = h.Page,
-                Title = $"Seite {h.Page}",
-                // Jump-to-page is client-side via #page=
-                ViewerUrl = $"{baseUrl}/api/docs/{ask.DocId}/{ask.Version}/pdf#page={h.Page}",
+                Page = h.PageNumber,
+                Title = h.FileName,
+                ViewerUrl = h.PdfPath,
                 Snippet = h.Snippet
             }).ToList();
 
@@ -113,7 +113,7 @@ public sealed class AskFunction
             return "Ich habe im Handbuch dazu keine passende Stelle gefunden (PoC-Suche).";
 
         var top = hits.Take(3).ToList();
-        var parts = top.Select(h => $"- {h.Snippet} (Seite {h.Page})");
+        var parts = top.Select(h => $"- {h.Snippet} (Seite {h.PageNumber})");
         return $"PoC-Antwort (aus gefundenen Stellen):\n\n{string.Join("\n", parts)}";
     }
 }
