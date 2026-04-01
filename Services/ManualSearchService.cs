@@ -75,6 +75,7 @@ public sealed class ManualSearchService
             })
             .Where(x => x.Score > 0)
             .OrderByDescending(x => x.Score)
+            .ThenByDescending(x => x.Item.Text?.Length ?? 0)
             .ThenBy(x => x.Item.PageNumber)
             .Take(Math.Max(1, top))
             .Select(x => new SearchHit
@@ -128,7 +129,7 @@ public sealed class ManualSearchService
         return s;
     }
 
-    private static readonly HashSet<string> AllowedShortTerms = ["lan","nc","md","hi"];
+    private static readonly HashSet<string> AllowedShortTerms = ["lan", "nc", "md", "hi"];
 
     private static List<string> SplitTerms(string normalizedQuery)
     {
@@ -166,15 +167,36 @@ public sealed class ManualSearchService
         if (matchedTerms == 0)
             return 0;
 
-        var score = matchedTerms * 2;
+        var score = matchedTerms * 3;
 
         var fullPhrase = string.Join(" ", queryTerms);
         if (searchText.Contains(fullPhrase, StringComparison.OrdinalIgnoreCase))
         {
-            score += 3;
+            score += 4;
         }
 
-        return score;
+        if (LooksLikeTableOfContents(searchText))
+        {
+            score -= 2;
+        }
+
+        return Math.Max(score, 1);
+    }
+    private static bool LooksLikeTableOfContents(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            return false;
+
+        var s = text.ToLowerInvariant();
+
+        if (s.Contains("contents"))
+            return true;
+
+        var dottedLeaderCount = s.Count(c => c == '.');
+        if (dottedLeaderCount > 25)
+            return true;
+
+        return false;
     }
     private static string BuildSnippet(string text, List<string> queryTerms)
     {
