@@ -41,7 +41,8 @@
         "type": "httpTrigger",
         "authLevel": "Anonymous",
         "methods": [
-          "get"
+          "get",
+          "options"
         ],
         "route": "docs/{docId}/{version}/pdf",
         "properties": {}
