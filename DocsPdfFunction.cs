@@ -68,6 +68,7 @@ public sealed class DocsPdfFunction
             resp.Headers.Add(
                 "Content-Security-Policy",
                 "frame-ancestors " +
+                "http://localhost:8181 " +
                 "https://make.powerapps.com " +
                 "https://*.powerapps.com " +
                 "https://*.apps.powerapps.com " +
