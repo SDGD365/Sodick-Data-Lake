@@ -40,7 +40,7 @@ public sealed class AskFunction
 
             // Call our own search endpoint (internal URL is simplest for PoC)
             // In production you'd call Search as a method or move logic to a shared service.
-            var baseUrl = Environment.GetEnvironmentVariable("Name") ?? $"{req.Url.Scheme}://{req.Url.Host}{(req.Url.IsDefaultPort ? "" : ":" + req.Url.Port)}";
+            var baseUrl = Environment.GetEnvironmentVariable("PublicBaseUrl") ?? $"{req.Url.Scheme}://{req.Url.Host}{(req.Url.IsDefaultPort ? "" : ":" + req.Url.Port)}";
             var searchUrl = $"{baseUrl}/api/search?docId={ask.DocId}&version={ask.Version}&lang={lang}&q={Uri.EscapeDataString(ask.Question)}";
 
             using var http = new HttpClient();
@@ -69,7 +69,7 @@ public sealed class AskFunction
             {
                 Page = h.PageNumber,
                 Title = h.FileName,
-                ViewerUrl = $"/api/viewer/manual/v1?page={h.PageNumber}",
+                ViewerUrl = BuildViewerUrl(baseUrl, h.PdfPath, h.PageNumber),
                 Snippet = h.Snippet
             }).ToList();
 
@@ -106,7 +106,19 @@ public sealed class AskFunction
             return resp;
         }
     }
+    private static string BuildViewerUrl(string baseUrl, string pdfPath, int pageNumber)
+    {
+        var parts = pdfPath.Split('/', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length < 4)
+            throw new InvalidOperationException($"Unexpected pdfPath format: {pdfPath}");
 
+        var docId = Path.GetFileNameWithoutExtension(parts[^1]);
+        var version = parts[^2];
+
+        return
+            $"{baseUrl}/api/viewer/" +
+            $"{Uri.EscapeDataString(docId)}/{Uri.EscapeDataString(version)}?page={pageNumber}";
+    }
     private static string DetectLang(string question, string lang)
     {
         lang = (lang ?? "auto").ToLowerInvariant();
