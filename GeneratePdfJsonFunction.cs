@@ -6,11 +6,11 @@ using SodickDataLake.Services;
 
 namespace SodickDataLake;
 
-public sealed class GeneratePdfJson
+public sealed class GeneratePdfJsonFunction
 {
     private readonly PdfJsonGeneratorService _service;
 
-    public GeneratePdfJson(PdfJsonGeneratorService service)
+    public GeneratePdfJsonFunction(PdfJsonGeneratorService service)
     {
         _service = service;
     }
