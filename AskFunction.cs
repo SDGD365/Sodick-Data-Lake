@@ -65,11 +65,11 @@ public sealed class AskFunction
             // Später ersetzt du das durch echtes RAG (Azure OpenAI).
             var answer = BuildPoCAnswer(ask.Question, hits);
 
-            var citations = hits.Select(h => new Citation
+            var citations = hits.Take(3).Select(h => new Citation
             {
                 Page = h.PageNumber,
                 Title = h.FileName,
-                ViewerUrl = h.PdfPath,
+                ViewerUrl = $"/api/DocsPdf?blobPath={Uri.EscapeDataString(h.PdfPath)}&page={h.PageNumber}",
                 Snippet = h.Snippet
             }).ToList();
 
