@@ -69,7 +69,7 @@ public sealed class AskFunction
             {
                 Page = h.PageNumber,
                 Title = h.FileName,
-                ViewerUrl = $"/api/docs/manual/v1/pdf?page={h.PageNumber}",
+                ViewerUrl = $"/api/viewer/manual/v1?page={h.PageNumber}",
                 Snippet = h.Snippet
             }).ToList();
 
