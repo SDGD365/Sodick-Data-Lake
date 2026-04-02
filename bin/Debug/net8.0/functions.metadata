@@ -44,7 +44,7 @@
           "get",
           "options"
         ],
-        "route": "docs/{docId}/{version}/pdf",
+        "route": "docs/viewer/{docId}/{version}/pdf",
         "properties": {}
       },
       {
