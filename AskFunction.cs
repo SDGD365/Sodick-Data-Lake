@@ -44,8 +44,21 @@ public sealed class AskFunction
             var searchUrl = $"{baseUrl}/api/search?docId={ask.DocId}&version={ask.Version}&lang={lang}&q={Uri.EscapeDataString(ask.Question)}";
 
             using var http = new HttpClient();
-            var searchJson = await http.GetStringAsync(searchUrl);
-            var searchResponse = JsonSerializer.Deserialize<SearchApiResponse>(searchJson) ?? new();
+
+            var searchKey = Environment.GetEnvironmentVariable("SearchFunctionKey");
+
+            using var requestMessage = new HttpRequestMessage(HttpMethod.Get, searchUrl);
+
+            if (!string.IsNullOrWhiteSpace(searchKey))
+            {
+                requestMessage.Headers.Add("x-functions-key", searchKey);
+            }
+
+            using var searchResponseMessage = await http.SendAsync(requestMessage);
+            searchResponseMessage.EnsureSuccessStatusCode();
+
+            var searchJson = await searchResponseMessage.Content.ReadAsStringAsync(); var searchResponse = JsonSerializer.Deserialize<SearchApiResponse>(searchJson) ?? new();
+
             var hits = searchResponse.Results ?? new List<SearchHit>();
 
             // PoC answer (ohne LLM): kurze Zusammenfassung aus Top-Hits
