@@ -12,7 +12,7 @@
         "name": "req",
         "direction": "In",
         "type": "httpTrigger",
-        "authLevel": "Function",
+        "authLevel": "Anonymous",
         "methods": [
           "post"
         ],

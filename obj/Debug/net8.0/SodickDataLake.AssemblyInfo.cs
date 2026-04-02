@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SodickDataLake")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa98c55cd62d9fb25736a6e78419d73c3ad16212")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+916c5875cba208eaef6da54a593f78bdc360360c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SodickDataLake")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SodickDataLake")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

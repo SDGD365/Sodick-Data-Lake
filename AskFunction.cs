@@ -18,7 +18,7 @@ public sealed class AskFunction
 
     [Function("Ask")]
     public async Task<HttpResponseData> Run(
-        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "qa/ask")] HttpRequestData req, CancellationToken cancellationToken)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "qa/ask")] HttpRequestData req)
     {
         try
         {
