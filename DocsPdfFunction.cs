@@ -33,7 +33,7 @@ public sealed class DocsPdfFunction
                 return optionsResp;
             }
 
-            var blobPath = $"raw/{docId}/{version}/manual.pdf";
+            var blobPath = $"raw/demo/{version}/{docId}.pdf";
 
             var storageUrl = _cfg["StorageAccountBlobUrl"]
                 ?? throw new InvalidOperationException("Missing StorageAccountBlobUrl");
@@ -59,7 +59,7 @@ public sealed class DocsPdfFunction
             ApplyCorsHeaders(resp, allowOrigin);
 
             resp.Headers.Add("Content-Type", "application/pdf");
-            resp.Headers.Add("Content-Disposition", "inline; filename=\"manual.pdf\"");
+            resp.Headers.Add("Content-Disposition", $"inline; filename=\"{docId}.pdf\"");
             resp.Headers.Add("Cache-Control", "private, max-age=60");
             resp.Headers.Add("Accept-Ranges", "bytes");
             resp.Headers.Add("Access-Control-Expose-Headers", "Accept-Ranges, Content-Length, Content-Range");
