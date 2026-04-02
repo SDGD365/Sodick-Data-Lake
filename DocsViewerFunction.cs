@@ -116,8 +116,7 @@ public sealed class DocsViewerFunction
     }
   </style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
-</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script></head>
 <body>
   <div class="shell">
     <div class="topbar">
@@ -138,8 +137,8 @@ public sealed class DocsViewerFunction
   </div>
 
   <script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js";
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
     const pdfUrl = {{System.Text.Json.JsonSerializer.Serialize(pdfUrl)}};
     let pageNum = {{page}};
