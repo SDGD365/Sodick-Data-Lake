@@ -268,6 +268,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
             "connect-src 'self' https:; " +
             "worker-src 'self' blob: https:; " +
             "frame-ancestors " +
+            "http://localhost:8181 " +
             "https://make.powerapps.com " +
             "https://*.powerapps.com " +
             "https://*.apps.powerapps.com " +
