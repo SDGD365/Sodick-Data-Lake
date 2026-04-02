@@ -69,7 +69,7 @@ public sealed class AskFunction
             {
                 Page = h.PageNumber,
                 Title = h.FileName,
-                ViewerUrl = $"/api/DocsPdf?blobPath={Uri.EscapeDataString(h.PdfPath)}&page={h.PageNumber}",
+                ViewerUrl = $"/api/docs/manual/v1/pdf?page={h.PageNumber}",
                 Snippet = h.Snippet
             }).ToList();
 
