@@ -16,7 +16,7 @@ public sealed class DocsPdfFunction
 
     [Function("DocsPdf")]
     public async Task<HttpResponseData> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", "options", Route = "docs/viewer/{docId}/{version}/pdf")] HttpRequestData req,
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", "options", Route = "docs/{docId}/{version}/pdf")] HttpRequestData req,
         string docId,
         string version)
     {

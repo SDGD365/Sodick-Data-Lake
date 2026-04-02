@@ -44,7 +44,35 @@
           "get",
           "options"
         ],
-        "route": "docs/viewer/{docId}/{version}/pdf",
+        "route": "docs/{docId}/{version}/pdf",
+        "properties": {}
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  },
+  {
+    "name": "DocsViewer",
+    "scriptFile": "SodickDataLake.dll",
+    "entryPoint": "DocsViewerFunction.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "direction": "In",
+        "type": "httpTrigger",
+        "authLevel": "Anonymous",
+        "methods": [
+          "get",
+          "options"
+        ],
+        "route": "viewer/{docId}/{version}",
         "properties": {}
       },
       {
