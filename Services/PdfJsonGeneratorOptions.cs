@@ -1,4 +1,4 @@
-﻿namespace SodickDataLake.Services;
+﻿namespace SodickMastermind.Services;
 
 public sealed class PdfJsonGeneratorOptions
 {

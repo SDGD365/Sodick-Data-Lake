@@ -1,4 +1,4 @@
-﻿namespace SodickDataLake.Models;
+﻿namespace SodickMastermind.Models;
 
 public sealed class AskRequest
 {

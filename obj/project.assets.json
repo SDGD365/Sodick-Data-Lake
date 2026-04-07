@@ -3153,11 +3153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\SodickDataLake.csproj",
-      "projectName": "SodickDataLake",
-      "projectPath": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\SodickDataLake.csproj",
+      "projectUniqueName": "C:\\Sodick CRM\\Azure\\Sodick Mastermind\\Sodick-Mastermind\\SodickMastermind.csproj",
+      "projectName": "SodickMastermind",
+      "projectPath": "C:\\Sodick CRM\\Azure\\Sodick Mastermind\\Sodick-Mastermind\\SodickMastermind.csproj",
       "packagesPath": "C:\\Users\\StephanWeichers\\.nuget\\packages\\",
-      "outputPath": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\obj\\",
+      "outputPath": "C:\\Sodick CRM\\Azure\\Sodick Mastermind\\Sodick-Mastermind\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

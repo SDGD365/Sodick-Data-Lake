@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x158ycS6QYk=",
+  "dgSpecHash": "XcQevcYp8kg=",
   "success": true,
-  "projectFilePath": "C:\\Sodick CRM\\Azure\\Sodick Data Lake\\Sodick-Data-Lake\\SodickDataLake.csproj",
+  "projectFilePath": "C:\\Sodick CRM\\Azure\\Sodick Mastermind\\Sodick-Mastermind\\SodickMastermind.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\StephanWeichers\\.nuget\\packages\\azure.core\\1.52.0\\azure.core.1.52.0.nupkg.sha512",
     "C:\\Users\\StephanWeichers\\.nuget\\packages\\azure.identity\\1.20.0\\azure.identity.1.20.0.nupkg.sha512",

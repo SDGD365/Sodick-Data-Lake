@@ -1,12 +1,12 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using SodickDataLake.Functions.Models;
-using SodickDataLake.Services;
+using SodickMastermind.Functions.Models;
+using SodickMastermind.Services;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace SodickDataLake.Functions.Services;
+namespace SodickMastermind.Functions.Services;
 
 public sealed class SearchJsonGeneratorService
 {

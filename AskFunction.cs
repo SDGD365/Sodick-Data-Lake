@@ -3,10 +3,9 @@ using Azure.Storage.Blobs;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
-using SodickDataLake.Models;
+using SodickMastermind.Models;
 using System.Net;
 using System.Text.Json;
-
 public sealed class AskFunction
 {
     private readonly ILogger<AskFunction> _logger;

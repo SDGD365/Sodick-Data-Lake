@@ -1,11 +1,11 @@
 ﻿using Azure.Storage.Blobs;
-using SodickDataLake.Functions.Models;
-using SodickDataLake.Models;
-using SodickDataLake.Services;
+using SodickMastermind.Functions.Models;
+using SodickMastermind.Models;
+using SodickMastermind.Services;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace SodickDataLake.Services;
+namespace SodickMastermind.Services;
 
 public sealed class ManualSearchService
 {

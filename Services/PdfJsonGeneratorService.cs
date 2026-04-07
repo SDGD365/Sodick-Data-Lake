@@ -2,11 +2,11 @@
 using System.Text.Json;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using SodickDataLake.Functions.Models;
-using SodickDataLake.Models;
+using SodickMastermind.Functions.Models;
+using SodickMastermind.Models;
 using UglyToad.PdfPig;
 
-namespace SodickDataLake.Services;
+namespace SodickMastermind.Services;
 
 public sealed class PdfJsonGeneratorService
 {

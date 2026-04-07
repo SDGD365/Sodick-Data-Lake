@@ -2,9 +2,9 @@
 using System.Text.Json;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using SodickDataLake.Services;
+using SodickMastermind.Services;
 
-namespace SodickDataLake;
+namespace SodickMastermind;
 
 public sealed class GeneratePdfJsonFunction
 {

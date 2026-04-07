@@ -1,4 +1,4 @@
-﻿namespace SodickDataLake.Functions.Models;
+﻿namespace SodickMastermind.Functions.Models;
 
 public sealed class SearchPageItem
 {

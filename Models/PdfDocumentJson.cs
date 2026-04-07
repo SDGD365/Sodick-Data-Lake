@@ -1,6 +1,6 @@
-﻿using SodickDataLake.Models;
+﻿using SodickMastermind.Models;
 
-namespace SodickDataLake.Functions.Models;
+namespace SodickMastermind.Functions.Models;
 
 public sealed class PdfDocumentJson
 {

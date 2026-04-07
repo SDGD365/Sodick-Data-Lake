@@ -1,11 +1,11 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using SodickDataLake.Functions.Services;
-using SodickDataLake.Services;
+using SodickMastermind.Functions.Services;
+using SodickMastermind.Services;
 using System.Net;
 using System.Text.Json;
 
-namespace SodickDataLake;
+namespace SodickMastermind;
 
 public sealed class SearchFunction
 {

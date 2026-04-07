@@ -1,8 +1,8 @@
 using Azure.Storage.Blobs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SodickDataLake.Functions.Services;
-using SodickDataLake.Services;
+using SodickMastermind.Functions.Services;
+using SodickMastermind.Services;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
